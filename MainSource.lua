@@ -134,7 +134,7 @@ getgenv().output = function(Text,Color)
 end
 
 if isfile("StrategiesX/UserConfig/UtilitiesConfig.txt") then
-    UtilitiesConfig = game:GetService("HttpService"):JSONDecode(readfile("StrategiesX/UserConfig/UtilitiesConfig.txt"))
+    UtilitiesConfig = game:GetService("HttpService"):JSONDecode('{"AutoBuyMissing":false,"Camera":2,"Webhook":{"Enabled":false,"PlayerInfo":true,"TroopsInfo":true,"Link":"","HideUser":false,"UseNewFormat":false,"GameInfo":true,"DisableCustomLog":true},"LowGraphics":true,"RestartMatch":true,"BypassGroup":false}')
     if tonumber(getgenv().DefaultCam) and tonumber(getgenv().DefaultCam) <= 3 and tonumber(getgenv().DefaultCam) ~= UtilitiesConfig.Camera then
         UtilitiesConfig.Camera = tonumber(getgenv().DefaultCam)
     end
